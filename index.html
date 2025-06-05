@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Narcdept</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      background: linear-gradient(270deg, #0f0c29, #302b63, #24243e);
+      background-size: 600% 600%;
+      animation: bgAnimation 20s ease infinite;
+    }
+
+    @keyframes bgAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -10;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+
+    .product {
+      padding: 1.5rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .product img {
+      max-width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .product img:hover {
+      transform: scale(1.1);
+    }
+
+    .social, .paypal {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    a {
+      color: #aaffee;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <header>
+    Narcdept
+    <div class="tagline">Brought to you by The Plugfessor</div>
+  </header>
+
+  <div class="product">
+    <h2>Mossbane</h2>
+    <img src="https://via.placeholder.com/200x200?text=Mossbane" alt="Mossbane">
+    <p>[Weed-themed product description here]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="product">
+    <h2>Goldteach</h2>
+    <img src="https://via.placeholder.com/200x200?text=Goldteach" alt="Goldteach">
+    <p>[Mushroom-themed product description here]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="product">
+    <h2>Vapour</h2>
+    <img src="https://via.placeholder.com/200x200?text=Vapour" alt="Vapour">
+    <p>[Vape-themed product description here]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="product">
+    <h2>Molo</h2>
+    <img src="https://via.placeholder.com/200x200?text=Molo" alt="Molo">
+    <p>[Description coming soon]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="product">
+    <h2>Acix</h2>
+    <img src="https://via.placeholder.com/200x200?text=Acix" alt="Acix">
+    <p>[Description coming soon]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="product">
+    <h2>Fakeset</h2>
+    <img src="https://via.placeholder.com/200x200?text=Fakeset" alt="Fakeset">
+    <p>[Description coming soon]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="product">
+    <h2>Drivelic</h2>
+    <img src="https://via.placeholder.com/200x200?text=Drivelic" alt="Drivelic">
+    <p>[Description coming soon]</p>
+    <p>Price: $XX.XX</p>
+  </div>
+
+  <div class="social">
+    <p>Follow us on <a href="https://www.instagram.com/lushnlit/" target="_blank">Instagram</a></p>
+  </div>
+
+  <div class="paypal">
+    <p>Support us via PayPal: <a href="mailto:squadmatez@gmail.com">squadmatez@gmail.com</a></p>
+  </div>
+
+  <footer>
+    <p>18+ | All rights reserved © Narcdept</p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    let w, h;
+    let stars = [];
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.onresize = resize;
+
+    for (let i = 0; i < 200; i++) {
+      stars.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 2,
+        d: Math.random() * 2 + 1,
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = "white";
+      for (let i = 0; i < stars.length; i++) {
+        let s = stars[i];
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+        s.y += s.d;
+        if (s.y > h) {
+          s.y = 0;
+          s.x = Math.random() * w;
+        }
+      }
+      requestAnimationFrame(drawStars);
+    }
+    drawStars();
+  </script>
+</body>
+</html>
