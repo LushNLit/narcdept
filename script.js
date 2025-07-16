@@ -1,1 +1,0 @@
-// Cart and page functionality
