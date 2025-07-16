@@ -1,10 +1,16 @@
-// Initialize cart
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-");
+}
 
 function addToCart(itemName, price) {
-  // Always use passed price, don't extract from string
   cart.push({ item: itemName, price: price });
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
   alert(`${itemName} added to cart`);
 }
 
@@ -16,12 +22,32 @@ function loadCart() {
   list.innerHTML = "";
 
   if (cart.length === 0) {
-    list.innerHTML = "<li>Your cart is empty. Add some products!</li>";
+    list.innerHTML = "<li>Your cart is empty.</li>";
   } else {
-    cart.forEach(entry => {
+    cart.forEach((entry) => {
       const li = document.createElement("li");
-      li.textContent = `${entry.item} — KES ${entry.price}`;
+
+      // Auto image filename from item name
+      const imgName = slugify(entry.item) + ".jpg";
+      const img = document.createElement("img");
+      img.src = `images/${imgName}`;
+      img.alt = entry.item;
+      img.style.width = "60px";
+      img.style.height = "60px";
+      img.style.objectFit = "cover";
+      img.style.borderRadius = "10px";
+      img.style.marginRight = "10px";
+
+      const text = document.createElement("span");
+      text.textContent = `${entry.item} — KES ${entry.price}`;
+
+      li.style.display = "flex";
+      li.style.alignItems = "center";
+      li.style.marginBottom = "12px";
+      li.appendChild(img);
+      li.appendChild(text);
       list.appendChild(li);
+
       total += Number(entry.price);
     });
   }
@@ -35,7 +61,6 @@ function clearCart() {
   loadCart();
 }
 
-// Load cart if this page has a cart display
 window.onload = function () {
   if (document.getElementById("cart-list")) {
     loadCart();
