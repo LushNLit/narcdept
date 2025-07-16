@@ -3,47 +3,41 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vapour – Narcdept</title>
+  <title>Vapour</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>Vapour Products</h1>
-    <p class="tagline">Smooth pulls & icy vibes 💨</p>
-  </header>
+  <header><h1>Vapour Products</h1></header>
 
-  <section class="product-grid">
-    <div class="product-card">
+  <section class="category-grid">
+    <div class="category">
       <img src="images/vapour-watermelon.jpg" alt="Watermelon Ice Vape">
-      <h3>Watermelon Ice</h3>
-      <p>KES 3000</p>
-      <button onclick="addToCart('Elfbar 10k - Watermelon Ice', 3000, 'images/vapour-watermelon.jpg')">Add to Cart</button>
+      <h2>Watermelon Ice</h2>
+      <p><strong>Price:</strong> KES 3000</p>
+      <button onclick="addToCart('Elfbar 10k - Watermelon Ice', 3000)">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="category">
       <img src="images/vapour-strawberry.jpg" alt="Strawberry Ice Vape">
-      <h3>Strawberry Ice</h3>
-      <p>KES 3000</p>
-      <button onclick="addToCart('Elfbar 10k - Strawberry Ice', 3000, 'images/vapour-strawberry.jpg')">Add to Cart</button>
+      <h2>Strawberry Ice</h2>
+      <p><strong>Price:</strong> KES 3000</p>
+      <button onclick="addToCart('Elfbar 10k - Strawberry Ice', 3000)">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="category">
       <img src="images/vapour-grape.jpg" alt="Grape Ice Vape">
-      <h3>Grape Ice</h3>
-      <p>KES 3000</p>
-      <button onclick="addToCart('Elfbar 10k - Grape Ice', 3000, 'images/vapour-grape.jpg')">Add to Cart</button>
+      <h2>Grape Ice</h2>
+      <p><strong>Price:</strong> KES 3000</p>
+      <button onclick="addToCart('Elfbar 10k - Grape Ice', 3000)">Add to Cart</button>
     </div>
   </section>
 
-  <!-- Floating Cart Icon -->
+  <!-- 🛒 Floating Cart Button -->
   <a href="cart.html" id="floating-cart">
     <img src="images/cart-icon.png" alt="Cart" />
   </a>
 
-  <footer>
-    <p><a href="index.html">← Back to shop</a></p>
-  </footer>
-
+  <footer><p><a href="index.html">← Back to shop</a></p></footer>
   <script src="script.js"></script>
 </body>
 </html>
