@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muscaria – Narcdept</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muscaria</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>Muscaria</h1>
-    <p class="tagline">Trippy realms 🍄</p>
-  </header>
+  <header><h1>Muscaria Products</h1></header>
 
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="images/golden-teacher.jpg" alt="Golden Teacher">
-      <h3>Golden Teacher</h3>
-      <p>KES 4500/g</p>
-      <button onclick="addToCart('Golden Teacher', 4500, 'images/golden-teacher.jpg')">Add to Cart</button>
+  <section class="category-grid">
+    <div class="category">
+      <img src="images/golden-teacher.jpg" alt="golden teacher">
+      <h2>golden teacher</h2>
+      <p><strong>Price:</strong> KES 4500/g</p>
+      <button onclick="addToCart('golden teacher', 4500)">Add to Cart</button>
     </div>
 
-    <div class="product-card">
-      <img src="images/magic-blue.jpg" alt="Magic Blue">
-      <h3>Magic Blue</h3>
-      <p>KES 3200/g</p>
-      <button onclick="addToCart('Magic Blue', 3200, 'images/magic-blue.jpg')">Add to Cart</button>
+    <div class="category">
+      <img src="images/magic-blue.jpg" alt="magic blue">
+      <h2>magic blue</h2>
+      <p><strong>Price:</strong> KES 3200/g</p>
+      <button onclick="addToCart('magic blue', 3200)">Add to Cart</button>
     </div>
 
-    <div class="product-card">
-      <img src="images/frosted-jack.jpg" alt="Frosted Jack">
-      <h3>Frosted Jack</h3>
-      <p>KES 3200/g</p>
-      <button onclick="addToCart('Frosted Jack', 3200, 'images/frosted-jack.jpg')">Add to Cart</button>
+    <div class="category">
+      <img src="images/frosted-jack.jpg" alt="frosted jack">
+      <h2>frosted jack</h2>
+      <p><strong>Price:</strong> KES 3200/g</p>
+      <button onclick="addToCart('frosted jack', 3200)">Add to Cart</button>
     </div>
   </section>
 
+  <!-- 🛒 Floating Cart Button -->
   <a href="cart.html" id="floating-cart">
     <img src="images/cart-icon.png" alt="Cart" />
   </a>
 
-  <footer>
-    <p><a href="index.html">← Back to shop</a></p>
-  </footer>
-
+  <footer><p><a href="index.html">← Back to shop</a></p></footer>
   <script src="script.js"></script>
 </body>
 </html>
