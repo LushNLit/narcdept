@@ -2,139 +2,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Narcdept</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Narcdept — Brought to You by the Plugfessor</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <div class="background"></div>
+
   <header>
     <h1>Narcdept</h1>
-    <p class="tagline">Stay safe and trusted — brought to you by the Plugfessor</p>
+    <p>Brought to you by the Plugfessor</p>
+    <p>Follow us on Instagram:
+      <a href="https://instagram.com/narcdept.official" target="_blank">@narcdept.official</a>
+    </p>
   </header>
 
-  <section class="category-grid">
-    <a href="mossbane.html" class="category">
-      <img src="images/cover-mossbane.jpg" alt="Mossbane">
-      <h2>Mossbane</h2>
-    </a>
-    <a href="muscaria.html" class="category">
-      <img src="images/cover-muscaria.jpg" alt="Muscaria">
-      <h2>Muscaria</h2>
-    </a>
-    <a href="vapour.html" class="category">
-      <img src="images/cover-vapour.jpg" alt="Vapour">
-      <h2>Vapour</h2>
-    </a>
-    <a href="molo.html" class="category">
-      <img src="images/cover-molo.jpg" alt="Molo">
-      <h2>Molo</h2>
-    </a>
-    <a href="acix.html" class="category">
-      <img src="images/cover-acix.jpg" alt="Acix">
-      <h2>Acix</h2>
-    </a>
-    <a href="cart.html" class="category">
-      <img src="images/cart.jpg" alt="Cart">
-      <h2>Cart / Order</h2>
-    </a>
-  </section>
+  <main>
+    <section class="category-grid">
 
-  <footer>
-    <p>&copy; 2025 Narcdept. 18+ only. Instagram: <a href="<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Cart</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <header>
-    <h1>Your Cart</h1>
-    <p>Follow us on Instagram: <a href="https://instagram.com/narcdept.official" target="_blank">@narcdept.official</a></p>
-  </header>
+      <!-- Mossbane Section -->
+      <div class="category mossbane">
+        <h2>Mossbane 🌿</h2>
+        <img src="images/mossbane-cover.jpg" alt="Mossbane Cover" />
+        <ul class="product-list">
+          <li>
+            <img src="images/gnmmy.jpg" alt="gnmmy"/>
+            <p>gnmmy — <span class="price">KES —</span></p>
+            <button onclick="addToCart('gnmmy', '', 'images/gnmmy.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/c00kies.jpg" alt="c00kies"/>
+            <p>c00kies — <span class="price">KES 300</span></p>
+            <button onclick="addToCart('c00kies', 300, 'images/c00kies.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/blvnts.jpg" alt="blvnts"/>
+            <p>blvnts — <span class="price">KES 150</span></p>
+            <button onclick="addToCart('blvnts', 150, 'images/blvnts.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/ch0clates.jpg" alt="ch0clates"/>
+            <p>ch0clates — <span class="price">KES —</span></p>
+            <button onclick="addToCart('ch0clates', '', 'images/ch0clates.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/br0wni3s.jpg" alt="br0wni3s"/>
+            <p>br0wni3s — <span class="price">KES —</span></p>
+            <button onclick="addToCart('br0wni3s', '', 'images/br0wni3s.jpg')">Add to Cart</button>
+          </li>
+        </ul>
+      </div>
 
-  <section class="category-grid">
-    <div class="category" style="width: 100%;">
-      <h2>🛒 Selected Items</h2>
-      <ul id="cart-list"></ul>
-      <p><strong>Total:</strong> <span id="cart-total">KES 0</span></p>
-      <button onclick="clearCart()">Clear Cart</button>
-    </div>
+      <!-- Muscaria Section -->
+      <div class="category muscaria">
+        <h2>Muscaria 🍄</h2>
+        <img src="images/muscaria-cover.jpg" alt="Muscaria Cover" />
+        <ul class="product-list">
+          <li>
+            <img src="images/goldenteacher.jpg" alt="golden teacher"/>
+            <p>Golden Teacher — <span class="price">KES 4500/g</span></p>
+            <button onclick="addToCart('Golden Teacher', 4500, 'images/goldenteacher.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/magicblue.jpg" alt="magic blue"/>
+            <p>Magic Blue — <span class="price">KES 3200/g</span></p>
+            <button onclick="addToCart('Magic Blue', 3200, 'images/magicblue.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/frostedjack.jpg" alt="frosted jack"/>
+            <p>Frosted Jack — <span class="price">KES 3200/g</span></p>
+            <button onclick="addToCart('Frosted Jack', 3200, 'images/frostedjack.jpg')">Add to Cart</button>
+          </li>
+        </ul>
+      </div>
 
-    <div class="category" style="width: 100%;">
-      <h2>📝 Complete Your Order</h2>
-      <p>
-        Once you're done adding items to your cart, complete the order form to finalize your purchase.
-        <br><br>
-        🔗 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeV2VJQpiml8B2bODS7CVoWKwNediq6CjcMsPKKvUAXS3s6dg/viewform?usp=header" target="_blank">
-          Click here to fill out the order form
-        </a>
-        <br><br>
-        📲 <strong>Payments are via M-Pesa to: 0704603135</strong>
-      </p>
-    </div>
-  </section>
+      <!-- Vapour Section -->
+      <div class="category vapour">
+        <h2>Vapour 🧃</h2>
+        <img src="images/vapour-cover.jpg" alt="Vapour Cover" />
+        <ul class="product-list">
+          <li>
+            <img src="images/elfbar-watermelon.jpg" alt="Elfbar Watermelon"/>
+            <p>Elfbar 10K Puffs — Watermelon Ice — <span class="price">KES 3000</span></p>
+            <button onclick="addToCart('Elfbar Watermelon', 3000, 'images/elfbar-watermelon.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/elfbar-strawberry.jpg" alt="Elfbar Strawberry"/>
+            <p>Elfbar 10K Puffs — Strawberry Ice — <span class="price">KES 3000</span></p>
+            <button onclick="addToCart('Elfbar Strawberry', 3000, 'images/elfbar-strawberry.jpg')">Add to Cart</button>
+          </li>
+          <li>
+            <img src="images/elfbar-grape.jpg" alt="Elfbar Grape"/>
+            <p>Elfbar 10K Puffs — Grape Ice — <span class="price">KES 3000</span></p>
+            <button onclick="addToCart('Elfbar Grape', 3000, 'images/elfbar-grape.jpg')">Add to Cart</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Molo Section -->
+      <div class="category molo">
+        <h2>Molo 🚨</h2>
+        <img src="images/molo-cover.jpg" alt="Molo Cover" />
+        <p class="coming-soon">Coming soon</p>
+      </div>
+
+      <!-- Acix Section -->
+      <div class="category acix">
+        <h2>Acix 💊</h2>
+        <img src="images/acix-cover.jpg" alt="Acix Cover" />
+        <p class="coming-soon">Coming soon</p>
+      </div>
+
+    </section>
+  </main>
 
   <a href="cart.html" id="floating-cart">
-    <img src="images/cart-icon.png" alt="Cart" />
+    <img src="images/cart-icon.png" alt="Cart Icon" />
   </a>
 
   <footer>
-    <p><a href="index.html">← Back to shop</a></p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-" target="_blank">@<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Cart</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <header>
-    <h1>Your Cart</h1>
-    <p>Follow us on Instagram: <a href="https://instagram.com/narcdept.official" target="_blank">@narcdept.official</a></p>
-  </header>
-
-  <section class="category-grid">
-    <div class="category" style="width: 100%;">
-      <h2>🛒 Selected Items</h2>
-      <ul id="cart-list"></ul>
-      <p><strong>Total:</strong> <span id="cart-total">KES 0</span></p>
-      <button onclick="clearCart()">Clear Cart</button>
-    </div>
-
-    <div class="category" style="width: 100%;">
-      <h2>📝 Complete Your Order</h2>
-      <p>
-        Once you're done adding items to your cart, complete the order form to finalize your purchase.
-        <br><br>
-        🔗 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeV2VJQpiml8B2bODS7CVoWKwNediq6CjcMsPKKvUAXS3s6dg/viewform?usp=header" target="_blank">
-          Click here to fill out the order form
-        </a>
-        <br><br>
-        📲 <strong>Payments are via M-Pesa to: 0704603135</strong>
-      </p>
-    </div>
-  </section>
-
-  <a href="cart.html" id="floating-cart">
-    <img src="images/cart-icon.png" alt="Cart" />
-  </a>
-
-  <footer>
-    <p><a href="index.html">← Back to shop</a></p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-</a></p>
+    <p>&copy; 2025 Narcdept. All rights reserved. <br><em>Stay Safe and Trusted</em></p>
   </footer>
 
   <script src="script.js"></script>
