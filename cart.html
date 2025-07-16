@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Cart</title>
   <link rel="stylesheet" href="style.css"/>
@@ -12,27 +12,32 @@
     <p>Follow us on Instagram: <a href="https://instagram.com/narcdept.official" target="_blank">@narcdept.official</a></p>
   </header>
 
-  <section class="category-grid">
-    <div class="category" style="width: 100%;">
-      <h2>🛒 Selected Items</h2>
-      <ul id="cart-list"></ul>
-      <p><strong>Total:</strong> <span id="cart-total">KES 0</span></p>
-      <button onclick="clearCart()">Clear Cart</button>
-    </div>
+  <main>
+    <section class="category-grid">
+      <div class="category" style="width: 100%;">
+        <h2>🛒 Selected Items</h2>
+        <ul id="cart-list"></ul>
+        <p><strong>Total:</strong> <span id="cart-total">KES 0</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+      </div>
 
-    <div class="category" style="width: 100%;">
-      <h2>📝 Complete Your Order</h2>
-      <p>
-        Once you're done adding items to your cart, complete the order form to finalize your purchase.
-        <br><br>
-        🔗 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeV2VJQpiml8B2bODS7CVoWKwNediq6CjcMsPKKvUAXS3s6dg/viewform?usp=header" target="_blank">
-          Click here to fill out the order form
-        </a>
-        <br><br>
-        📲 <strong>Payments are via M-Pesa to: 0704603135</strong>
-      </p>
-    </div>
-  </section>
+      <div class="category" style="width: 100%;">
+        <h2>📝 Complete Your Order</h2>
+        <p>
+          Once you're done adding items to your cart, fill out the form below to complete your order.
+          <br><br>
+          📲 <strong>Payments via M-Pesa: 0704603135</strong>
+        </p>
+
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeV2VJQpiml8B2bODS7CVoWKwNediq6CjcMsPKKvUAXS3s6dg/viewform?embedded=true"
+          width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+          style="background-color: #111; border-radius: 16px; border: none;">
+          Loading…
+        </iframe>
+      </div>
+    </section>
+  </main>
 
   <a href="cart.html" id="floating-cart">
     <img src="images/cart-icon.png" alt="Cart" />
