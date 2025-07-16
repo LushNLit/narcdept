@@ -27,7 +27,6 @@ function loadCart() {
     cart.forEach((entry) => {
       const li = document.createElement("li");
 
-      // Auto image filename from item name
       const imgName = slugify(entry.item) + ".jpg";
       const img = document.createElement("img");
       img.src = `images/${imgName}`;
