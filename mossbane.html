@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mossbane</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mossbane – Narcdept</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><h1>Mossbane Products</h1></header>
+  <header>
+    <h1>Mossbane</h1>
+    <p class="tagline">Relax & vibe 🌿</p>
+  </header>
 
-  <section class="category-grid">
-    <div class="category">
+  <section class="product-grid">
+    <div class="product-card">
       <img src="images/gnmmy.jpg" alt="gnmmy">
-      <h2>gnmmy</h2>
-      <p><strong>Price:</strong> KES TBD</p>
-      <button onclick="addToCart('gnmmy', 0)">Add to Cart</button>
+      <h3>Gnmmy</h3>
+      <p><!-- Add price later --></p>
+      <button onclick="addToCart('Gnmmy', '', 'images/gnmmy.jpg')">Add to Cart</button>
     </div>
-
-    <div class="category">
+    <div class="product-card">
       <img src="images/c00kies.jpg" alt="c00kies">
-      <h2>c00kies</h2>
-      <p><strong>Price:</strong> KES 300</p>
-      <button onclick="addToCart('c00kies (2pc strong)', 300)">Add to Cart</button>
+      <h3>c00kies</h3>
+      <p>KES 300 (2 pcs)</p>
+      <button onclick="addToCart('c00kies', 300, 'images/c00kies.jpg')">Add to Cart</button>
     </div>
-
-    <div class="category">
+    <div class="product-card">
       <img src="images/blvnts.jpg" alt="blvnts">
-      <h2>blvnts</h2>
-      <p><strong>Price:</strong> KES 150 (base) / 250 (infused)</p>
-      <button onclick="addToCart('blvnts - base', 150)">Add to Cart</button>
-      <button onclick="addToCart('blvnts - infused', 250)">Add to Cart</button>
+      <h3>blvnts</h3>
+      <p>KES 150 (base), 250 (infused)</p>
+      <button onclick="addToCart('blvnts', 150, 'images/blvnts.jpg')">Add to Cart</button>
     </div>
-
-    <div class="category">
+    <div class="product-card">
       <img src="images/ch0clates.jpg" alt="ch0clates">
-      <h2>ch0clates</h2>
-      <p><strong>Price:</strong> KES TBD</p>
-      <button onclick="addToCart('ch0clates', 0)">Add to Cart</button>
+      <h3>ch0clates</h3>
+      <p><!-- Add price later --></p>
+      <button onclick="addToCart('ch0clates', '', 'images/ch0clates.jpg')">Add to Cart</button>
     </div>
-
-    <div class="category">
+    <div class="product-card">
       <img src="images/br0wni3s.jpg" alt="br0wni3s">
-      <h2>br0wni3s</h2>
-      <p><strong>Price:</strong> KES TBD</p>
-      <button onclick="addToCart('br0wni3s', 0)">Add to Cart</button>
+      <h3>br0wni3s</h3>
+      <p><!-- Add price later --></p>
+      <button onclick="addToCart('br0wni3s', '', 'images/br0wni3s.jpg')">Add to Cart</button>
     </div>
   </section>
 
-  <footer><p><a href="index.html">← Back to shop</a></p></footer>
+  <!-- Floating Cart Icon -->
+  <a href="cart.html" id="floating-cart">
+    <img src="images/cart-icon.png" alt="Cart" />
+  </a>
+
+  <footer>
+    <p><a href="index.html">← Back to shop</a></p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
