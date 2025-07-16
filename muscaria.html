@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mossbane</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muscaria – Narcdept</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><h1>Mossbane Products</h1></header>
+  <header>
+    <h1>Muscaria</h1>
+    <p class="tagline">Explore your mind 🍄</p>
+  </header>
 
-  <section class="category-grid">
-    <div class="category">
-      <img src="images/gnmmy.jpg" alt="gnmmy">
-      <h2>gnmmy</h2>
-      <p><strong>Price:</strong> KES TBD</p>
-      <button onclick="addToCart('gnmmy', 0)">Add to Cart</button>
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="images/golden-teacher.jpg" alt="Golden Teacher">
+      <h3>Golden Teacher</h3>
+      <p>KES 4500/g</p>
+      <button onclick="addToCart('Golden Teacher', 4500, 'images/golden-teacher.jpg')">Add to Cart</button>
     </div>
-
-    <div class="category">
-      <img src="images/c00kies.jpg" alt="c00kies">
-      <h2>c00kies</h2>
-      <p><strong>Price:</strong> KES 300</p>
-      <button onclick="addToCart('c00kies (2pc strong)', 300)">Add to Cart</button>
+    <div class="product-card">
+      <img src="images/magic-blue.jpg" alt="Magic Blue">
+      <h3>Magic Blue</h3>
+      <p>KES 3200/g</p>
+      <button onclick="addToCart('Magic Blue', 3200, 'images/magic-blue.jpg')">Add to Cart</button>
     </div>
-
-    <div class="category">
-      <img src="images/blvnts.jpg" alt="blvnts">
-      <h2>blvnts</h2>
-      <p><strong>Price:</strong> KES 150 (base) / 250 (infused)</p>
-      <button onclick="addToCart('blvnts - base', 150)">Add to Cart</button>
-      <button onclick="addToCart('blvnts - infused', 250)">Add to Cart</button>
-    </div>
-
-    <div class="category">
-      <img src="images/ch0clates.jpg" alt="ch0clates">
-      <h2>ch0clates</h2>
-      <p><strong>Price:</strong> KES TBD</p>
-      <button onclick="addToCart('ch0clates', 0)">Add to Cart</button>
-    </div>
-
-    <div class="category">
-      <img src="images/br0wni3s.jpg" alt="br0wni3s">
-      <h2>br0wni3s</h2>
-      <p><strong>Price:</strong> KES TBD</p>
-      <button onclick="addToCart('br0wni3s', 0)">Add to Cart</button>
+    <div class="product-card">
+      <img src="images/frosted-jack.jpg" alt="Frosted Jack">
+      <h3>Frosted Jack</h3>
+      <p>KES 3200/g</p>
+      <button onclick="addToCart('Frosted Jack', 3200, 'images/frosted-jack.jpg')">Add to Cart</button>
     </div>
   </section>
 
-  <footer><p><a href="index.html">← Back to shop</a></p></footer>
+  <!-- Floating Cart Icon -->
+  <a href="cart.html" id="floating-cart">
+    <img src="images/cart-icon.png" alt="Cart" />
+  </a>
+
+  <footer>
+    <p><a href="index.html">← Back to shop</a></p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
