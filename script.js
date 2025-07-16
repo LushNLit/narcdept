@@ -1,52 +1,67 @@
-// Load cart from localStorage
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Function to display cart contents
-function displayCart() {
-  const cartList = document.getElementById("cart-list");
-  const cartTotal = document.getElementById("cart-total");
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-");
+}
 
-  if (!cartList || !cartTotal) return;
+function addToCart(itemName, price) {
+  cart.push({ item: itemName, price: price });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${itemName} added to cart`);
+}
 
-  // Clear previous list to prevent duplicates
-  cartList.innerHTML = "";
-
+function loadCart() {
+  const list = document.getElementById("cart-list");
+  const totalDisplay = document.getElementById("cart-total");
   let total = 0;
 
-  cart.forEach(item => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <strong>${item.name}</strong> – ${item.price ? "KES " + item.price : "Price TBD"}
-    `;
+  list.innerHTML = "";
 
-    // Add image if available
-    if (item.image) {
+  if (cart.length === 0) {
+    list.innerHTML = "<li>Your cart is empty.</li>";
+  } else {
+    cart.forEach((entry) => {
+      const li = document.createElement("li");
+
+      const imgName = slugify(entry.item) + ".jpg";
       const img = document.createElement("img");
-      img.src = item.image;
-      img.alt = item.name;
-      img.style.width = "80px";
-      img.style.borderRadius = "8px";
-      img.style.display = "block";
-      img.style.marginTop = "8px";
+      img.src = `images/${imgName}`;
+      img.alt = entry.item;
+      img.style.width = "60px";
+      img.style.height = "60px";
+      img.style.objectFit = "cover";
+      img.style.borderRadius = "10px";
+      img.style.marginRight = "10px";
+
+      const text = document.createElement("span");
+      text.textContent = `${entry.item} — KES ${entry.price}`;
+
+      li.style.display = "flex";
+      li.style.alignItems = "center";
+      li.style.marginBottom = "12px";
       li.appendChild(img);
-    }
+      li.appendChild(text);
+      list.appendChild(li);
 
-    cartList.appendChild(li);
+      total += Number(entry.price);
+    });
+  }
 
-    if (item.price) {
-      total += parseFloat(item.price);
-    }
-  });
-
-  cartTotal.innerText = "KES " + total.toFixed(2);
+  totalDisplay.textContent = `KES ${total}`;
 }
 
-// Function to clear cart
 function clearCart() {
-  localStorage.removeItem("cart");
   cart = [];
-  displayCart();
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
 }
 
-// Display cart on load
-window.onload = displayCart;
+window.onload = function () {
+  if (document.getElementById("cart-list")) {
+    loadCart();
+  }
+};
