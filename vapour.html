@@ -1,78 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="style.css" />
-    <title>Vapour Products</title>
-  </head>
-  <body>
-    <header>
-      <h1>Narc Department</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="vapour.html">Vapour</a></li>
-          <li><a href="bake.html">Bake</a></li>
-          <li><a href="proxy.html">Proxy</a></li>
-        </ul>
-      </nav>
-    </header>
+<section class="category-grid">
+  <div class="category">
+    <img src="images/vapour-watermelon.jpg" alt="Watermelon Ice Vape">
+    <h2>Watermelon Ice</h2>
+    <p><strong>Price:</strong> KES 3000</p>
+    <button onclick="addToCart('Elfbar 10k - Watermelon Ice', 3000)">Add to Cart</button>
+  </div>
 
-    <main>
-      <section class="product-grid">
-        <div class="product-card">
-          <img src="images/solo-blue-razz.jpg" alt="Blue Razz" />
-          <h2>Blue Razz</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Blue Razz', 1650)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="images/solo-cool-mint.jpg" alt="Cool Mint" />
-          <h2>Cool Mint</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Cool Mint', 1650)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="images/solo-lush-ice.jpg" alt="Lush Ice Watermelon" />
-          <h2>Lush Ice Watermelon</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Lush Ice Watermelon', 1650)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="images/solo-grape-ice.jpg" alt="Grape Ice" />
-          <h2>Grape Ice</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Grape Ice', 1650)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="images/solo-mint-bubblegum.jpg" alt="Mint Bubblegum" />
-          <h2>Mint Bubblegum</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Mint Bubblegum', 1650)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="images/solo-blackcurrant-lemon.jpg" alt="Blackcurrant Lemon" />
-          <h2>Blackcurrant Lemon</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Blackcurrant Lemon', 1650)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="images/solo-cherry-ice.jpg" alt="Cherry Ice" />
-          <h2>Cherry Ice</h2>
-          <p>KES 1650</p>
-          <button onclick="addToCart('Cherry Ice', 1650)">Add to Cart</button>
-        </div>
-      </section>
-    </main>
+  <div class="category">
+    <img src="images/vapour-strawberry.jpg" alt="Strawberry Ice Vape">
+    <h2>Strawberry Ice</h2>
+    <p><strong>Price:</strong> KES 3000</p>
+    <button onclick="addToCart('Elfbar 10k - Strawberry Ice', 3000)">Add to Cart</button>
+  </div>
 
-    <!-- 🔥 Floating Cart -->
-    <div id="floating-cart">
-      <img src="images/cart-icon.png" alt="Cart Icon" />
-    </div>
-    <ul id="cart-list"></ul>
+  <div class="category">
+    <img src="images/vapour-grape.jpg" alt="Grape Ice Vape">
+    <h2>Grape Ice</h2>
+    <p><strong>Price:</strong> KES 3000</p>
+    <button onclick="addToCart('Elfbar 10k - Grape Ice', 3000)">Add to Cart</button>
+  </div>
 
-    <!-- 🔥 Cart Logic Script -->
-    <script src="script.js"></script>
-  </body>
-</html>
+  <!-- New SOLO X 1500 Puff Additions -->
+  <div class="category">
+    <img src="images/solo-blue-razz.jpg" alt="Solo X Blue Razz">
+    <h2>Solo X - Blue Razz</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Blue Razz', 1650)">Add to Cart</button>
+  </div>
+
+  <div class="category">
+    <img src="images/solo-cool-mint.jpg" alt="Solo X Cool Mint">
+    <h2>Solo X - Cool Mint</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Cool Mint', 1650)">Add to Cart</button>
+  </div>
+
+  <div class="category">
+    <img src="images/solo-lush-ice.jpg" alt="Solo X Lush Ice Watermelon">
+    <h2>Solo X - Lush Ice Watermelon</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Lush Ice Watermelon', 1650)">Add to Cart</button>
+  </div>
+
+  <div class="category">
+    <img src="images/solo-grape-ice.jpg" alt="Solo X Grape Ice">
+    <h2>Solo X - Grape Ice</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Grape Ice', 1650)">Add to Cart</button>
+  </div>
+
+  <div class="category">
+    <img src="images/solo-mint-bubblegum.jpg" alt="Solo X Mint Bubblegum">
+    <h2>Solo X - Mint Bubblegum</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Mint Bubblegum', 1650)">Add to Cart</button>
+  </div>
+
+  <div class="category">
+    <img src="images/solo-blackcurrant-lemon.jpg" alt="Solo X Blackcurrant Lemon">
+    <h2>Solo X - Blackcurrant Lemon</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Blackcurrant Lemon', 1650)">Add to Cart</button>
+  </div>
+
+  <div class="category">
+    <img src="images/solo-cherry-ice.jpg" alt="Solo X Cherry Ice">
+    <h2>Solo X - Cherry Ice</h2>
+    <p><strong>Price:</strong> KES 1650</p>
+    <button onclick="addToCart('Solo X - Cherry Ice', 1650)">Add to Cart</button>
+  </div>
+</section>
+
+
